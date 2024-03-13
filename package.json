@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@elysiajs/eden": "^0.8.1",
+    "@elysiajs/swagger": "^0.8.5",
     "@hookform/resolvers": "^3.3.4",
     "@react-three/fiber": "^8.15.19",
     "@tailwindcss/typography": "^0.5.10",
@@ -17,6 +19,7 @@
     "@tsparticles/slim": "^3.3.0",
     "@types/three": "^0.162.0",
     "clsx": "^2.1.0",
+    "elysia": "^0.8.17",
     "framer-motion": "^11.0.8",
     "lucide-react": "^0.343.0",
     "next": "14.1.0",
@@ -25,6 +28,7 @@
     "react-hook-form": "^7.51.0",
     "react-typed": "^2.0.12",
     "tailwind-merge": "^2.2.1",
+    "telegraf": "^4.16.3",
     "three": "^0.162.0",
     "zod": "^3.22.4",
     "zustand": "^4.5.1"

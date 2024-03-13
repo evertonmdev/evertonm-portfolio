@@ -3,9 +3,9 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as React from "react";
 import { useForm } from "react-hook-form";
-import { ReactTyped } from "react-typed";
 import { z } from "zod";
 
+import { ApiClient } from "@/lib/utils/eden-client";
 import FormSubmitButton from "./form-submit-button";
 import { InputForm } from "./input-form";
 
@@ -14,7 +14,7 @@ export const formContactSchema = z.object({
 		.string()
 		.min(3, { message: "Por favor informe seu nome" })
 		.max(100, { message: "O nome deve ter no máximo 100 caracteres" }),
-	email: z.string().email({ message: "Email invalido!" }).optional(),
+	email: z.string().email({ message: "Email invalido!" }),
 	message: z.string(),
 });
 
@@ -25,8 +25,13 @@ const Form: React.FunctionComponent = () => {
 		resolver: zodResolver(formContactSchema),
 	});
 
-	const onSubmit = (data: FormContactSchema) => {
-		console.log(data);
+	const onSubmit = async (data: FormContactSchema) => {
+		console.log(
+			await ApiClient("/api/messenger/contactReport", {
+				method: "POST",
+				body: data,
+			}),
+		);
 	};
 
 	return (

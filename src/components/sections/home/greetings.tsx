@@ -12,7 +12,12 @@ const Greetings: React.FunctionComponent = () => {
 		<>
 			<article className="prose text-zinc-200 h-[fit] w-full">
 				<motion.div
-					{...MoveBottomToTop(0.2)}
+					initial="initial"
+					animate="start"
+					transition={{
+						duration: 0.5,
+					}}
+					variants={MoveBottomToTop}
 					className="flex gap-2 justify-start items-center max-h-fit"
 				>
 					<i className="h-1 bg-accent w-7 " />
@@ -22,19 +27,41 @@ const Greetings: React.FunctionComponent = () => {
 					</h1>
 				</motion.div>
 				<motion.h2
-					{...MoveBottomToTop(0.5)}
+					initial="initial"
+					animate="start"
+					transition={{
+						duration: 0.5,
+						delay: 0.5,
+					}}
+					variants={MoveBottomToTop}
 					className="text-zinc-300 mt-0"
 					style={{ marginLeft: "calc(1.75rem + 0.5rem)" }}
 				>
 					FullStack Developer
 				</motion.h2>
-				<motion.p {...MoveBottomToTop(0.8)}>
+				<motion.p
+					initial="initial"
+					animate="start"
+					transition={{
+						duration: 0.5,
+						delay: 0.8,
+					}}
+					variants={MoveBottomToTop}
+				>
 					Sou um profissional dedicado, proativo e apaixonado pelo que faço.
 					Acredito no poder da tecnologia para transformar o mundo e busco
 					contribuir para projetos que façam a diferença.
 				</motion.p>
 			</article>
-			<motion.div {...MoveBottomToTop(1)}>
+			<motion.div
+				initial="initial"
+				animate="start"
+				transition={{
+					duration: 0.5,
+					delay: 1,
+				}}
+				variants={MoveBottomToTop}
+			>
 				<Button
 					label="Mais sobre mim"
 					type="href"

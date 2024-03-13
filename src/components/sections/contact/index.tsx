@@ -1,6 +1,6 @@
 import TextShaded from "@/components/ui/TextShaded";
 import * as React from "react";
-import Form from "./form";
+import Form, { FormContactSchema } from "./form";
 
 const Contact: React.FunctionComponent = () => {
 	return (
