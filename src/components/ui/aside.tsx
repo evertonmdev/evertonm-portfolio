@@ -49,15 +49,15 @@ const Aside: React.FunctionComponent = (props) => {
 			onMouseEnter={handleHover.enter}
 			onMouseLeave={handleHover.leave}
 			className={cn(
-				"fixed h-fit w-fit right-5 transform -translate-y-1/2 top-1/2 rounded-full p-1 py-2 transition-all duration-150 z-30",
+				"fixed h-fit w-fit right-5 transform -translate-y-1/2 top-1/2 rounded-full p-1 py-2 transition-all duration-150 z-[999]",
 				!visible && "opacity-0",
 			)}
 		>
 			<ul className="flex flex-col justify-center items-center gap-3">
-				<LiComponent scope={[0, 0.25]} href="#home" Icon={FaHome} />
-				<LiComponent scope={[0.5, 1]} href="#sobremim" Icon={FaUser} />
-				<LiComponent href="#contato" Icon={MdEmail} />
-				<LiComponent href="#projetos" Icon={FaTerminal} />
+				<LiComponent scope={[0, 1]} href="#home" Icon={FaHome} />
+				<LiComponent scope={[1, 2]} href="#sobremim" Icon={FaUser} />
+				<LiComponent scope={[2, 3]} href="#projetos" Icon={FaTerminal} />
+				<LiComponent scope={[3, 5]} href="#contato" Icon={MdEmail} />
 			</ul>
 		</aside>
 	);
