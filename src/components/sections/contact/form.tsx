@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 
 import { ApiClient } from "@/lib/utils/eden-client";
+import { toast } from "sonner";
 import FormSubmitButton from "./form-submit-button";
 import { InputForm } from "./input-form";
 
@@ -21,23 +22,33 @@ export const formContactSchema = z.object({
 export type FormContactSchema = z.infer<typeof formContactSchema>;
 
 const Form: React.FunctionComponent = () => {
+	const [isDisabled, setButtonDisabled] = React.useState<boolean>(false);
 	const { control, handleSubmit } = useForm<FormContactSchema>({
 		resolver: zodResolver(formContactSchema),
 	});
 
 	const onSubmit = async (data: FormContactSchema) => {
-		console.log(
-			await ApiClient("/api/messenger/contactReport", {
-				method: "POST",
-				body: data,
-			}),
-		);
+		setButtonDisabled(true);
+		ApiClient("/api/messenger/contactReport", {
+			method: "POST",
+			body: data,
+		})
+			.then((r) => {
+				if (r) {
+					setButtonDisabled(false);
+					toast.success("Mensagem enviada com sucesso!");
+				}
+			})
+			.catch((e) => {
+				toast.error("Falha ao enviar mensagem, por favor me mande um email!");
+				setButtonDisabled(false);
+			});
 	};
 
 	return (
 		<form
 			onSubmit={handleSubmit(onSubmit)}
-			className="w-full h-fit flex flex-col text-zinc-200 gap-4"
+			className="w-full h-fit flex flex-col text-zinc-200 gap-4 "
 		>
 			<InputForm control={control} name="name" label="Nome" type="text" />
 			<InputForm control={control} name="email" label="E-mail" type="email" />
@@ -47,7 +58,8 @@ const Form: React.FunctionComponent = () => {
 				label="Mensagem"
 				type="textarea"
 			/>
-			<FormSubmitButton />
+
+			<FormSubmitButton isDisbled={isDisabled} />
 		</form>
 	);
 };

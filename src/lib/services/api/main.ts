@@ -27,7 +27,9 @@ const MainApi = new Elysia({
 		"/messenger/contactReport",
 		async ({ body }) => {
 			const response = await Messenger.reportContact(body);
-			return response;
+
+			if (response) return "success";
+			return "failed";
 		},
 		{
 			body: t.Object({

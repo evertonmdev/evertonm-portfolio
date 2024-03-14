@@ -15,14 +15,14 @@ export const CardHardSkill: React.FC<ICardHardSkill> = ({
 	label,
 	isStarred,
 }) => {
-	const [isHovered, setIsHovered] = React.useState<boolean>(false);
 	const ref = React.useRef<HTMLDivElement>(null);
 	const { activated, setAtualActive } = useCardHardSkill();
 
-	React.useEffect(() => {
-		if (activated.current === ref.current) setIsHovered(true);
-		else setIsHovered(false);
-	}, [activated, ref, setIsHovered]);
+	const isActivated = React.useCallback(() => {
+		if (activated.current === ref.current && activated.current !== null)
+			return true;
+		return false;
+	}, [activated, ref]);
 
 	return (
 		<div className="relative">
@@ -34,12 +34,11 @@ export const CardHardSkill: React.FC<ICardHardSkill> = ({
 			<motion.div
 				ref={ref}
 				onTap={() => setAtualActive(ref)}
-				onHoverStart={() => setIsHovered(true)}
-				onHoverEnd={() => setIsHovered(false)}
+				onHoverStart={() => setAtualActive(ref)}
 				className="w-[80px] h-auto aspect-square rounded-lg bg-secondary shadow-lg p-3 flex flex-col justify-start items-center relative"
 				initial={{ filter: "brightness(1) grayscale(1)" }}
 				animate={{
-					filter: isHovered
+					filter: isActivated()
 						? "brightness(1.2) grayscale(0)"
 						: "brightness(1) grayscale(1)",
 					transition: {
@@ -49,16 +48,16 @@ export const CardHardSkill: React.FC<ICardHardSkill> = ({
 			>
 				{children}
 				<motion.span
-					initial={{ height: "0px", opacity: 0, y: 0 }}
+					initial={{ opacity: 0, y: 0 }}
 					animate={{
-						height: isHovered ? "auto" : 0,
-						opacity: isHovered ? 1 : 0,
-						y: isHovered ? 5 : 0,
+						height: isActivated() ? undefined : 0,
+						opacity: isActivated() ? 1 : 0,
+						y: isActivated() ? 5 : 0,
 						transition: {
 							duration: 0.2,
 						},
 					}}
-					className="text-sm font-semibold h-0"
+					className="text-sm font-semibold"
 				>
 					{label}
 				</motion.span>

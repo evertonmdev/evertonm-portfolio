@@ -2,6 +2,7 @@ import Aside from "@/components/ui/aside";
 import { cn } from "@/lib/utils/cn";
 import { fonts } from "@/lib/utils/fonts";
 import type { Metadata } from "next";
+import { Toaster } from "sonner";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
 		"Meu Portfolio pessoal, aqui vou mostrar um pouco do meu trabalho e projetos que já participei. Me chamo Everton Matheus, sou desenvolvedor FullStack",
 	keywords: [
 		"Portfolio",
+		"Everton Matheus Rodrigues Mendes",
 		"Everton Matheus",
 		"Desenvolvedor FullStack",
 		"Everton",
@@ -47,6 +49,7 @@ export default function RootLayout({
 			<body>
 				{children}
 				<Aside />
+				<Toaster />
 			</body>
 		</html>
 	);
