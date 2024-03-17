@@ -59,7 +59,7 @@ const PersonalInformation: React.FC = () => {
 				label="Download CV"
 				className="mt-5"
 				type="href"
-				href="#contato"
+				href="/curriculo/curriculo.pdf"
 				Icon={<Download />}
 			/>
 		</article>

@@ -60,10 +60,9 @@ export function SoftSkillCard({
 
 			<motion.div
 				className={cn(
-					"font-medium text-sm transition-colors duration-500",
+					"font-medium text-sm transition-colors duration-500 drop-shadow-[0_0_5px]",
 					!isHovered && "text-zinc-200/30",
 				)}
-				animate={{ scale: isHovered ? 1.05 : 1, transition: { duration: 1.2 } }}
 			>
 				{title}
 			</motion.div>
