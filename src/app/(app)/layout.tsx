@@ -1,6 +1,7 @@
 import Aside from "@/components/ui/aside";
 import { cn } from "@/lib/utils/cn";
 import { fonts } from "@/lib/utils/fonts";
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Toaster } from "sonner";
 import "./globals.css";
@@ -50,6 +51,7 @@ export default function RootLayout({
 				{children}
 				<Aside />
 				<Toaster />
+				<Analytics />
 			</body>
 		</html>
 	);
