@@ -1,22 +1,12 @@
-import DockerLogo from "@/assets/docker-logo";
 import FigmaLogo from "@/assets/figma-logo";
 import GithubLogo from "@/assets/github-logo";
-import LinuxLogo from "@/assets/ubuntu-logo";
 import VSCodeLogo from "@/assets/vscode-logo";
 import { CardHardSkill, ICardHardSkill } from "@/components/ui/card-hardskill";
 import * as React from "react";
 
 const ToolsSkills: React.FunctionComponent = () => {
 	const tools_skills: ICardHardSkill[] = [
-		{
-			label: "Linux",
-			children: <LinuxLogo />,
-			isStarred: true,
-		},
-		{
-			label: "Docker",
-			children: <DockerLogo />,
-		},
+
 		{
 			label: "Github",
 			children: <GithubLogo />,

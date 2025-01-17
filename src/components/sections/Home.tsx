@@ -32,7 +32,7 @@ const Home: React.FunctionComponent = () => {
 					fill={true}
 					floating={true}
 					className="w-[30vw] h-[70vh]"
-					// imageClassName="
+				// imageClassName="
 				/>
 			</motion.div>
 			<div className="h-[60vh] flex flex-col gap-10">

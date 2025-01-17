@@ -4,7 +4,6 @@ import Contact from "@/components/sections/contact";
 import ProjectjsSession from "@/components/sections/projects/projects-session";
 import Divider from "@/components/ui/divider";
 import { SparklesCore } from "@/components/ui/sparkles";
-import * as React from "react";
 
 export default function App() {
 	return (

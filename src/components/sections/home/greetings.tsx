@@ -48,9 +48,7 @@ const Greetings: React.FunctionComponent = () => {
 					}}
 					variants={MoveBottomToTop}
 				>
-					Sou um profissional dedicado, proativo e apaixonado pelo que faço.
-					Acredito no poder da tecnologia para transformar o mundo e busco
-					contribuir para projetos que façam a diferença.
+					E aí! Chegou até aqui? Que bom! 😉 Prazer, sou desenvolvedor FullStack desde 2019 e tô sempre na correria pra aprender e criar coisas novas. Ultimamente, tenho me divertido bastante com AWS Serverless e AWS Bedrock, mas também manjo de React, Next.js, Node.js, Firebase... e por aí vai! Quer saber mais sobre mim e meus projetos? É só dar um scroll pra baixo! 👇
 				</motion.p>
 			</article>
 			<motion.div

@@ -17,11 +17,6 @@ const PersonalInformation: React.FC = () => {
 					<TermValue term="Nome" value="Everton" />
 					<TermValue term="Idade" value="18" />
 					<TermValue
-						term="Freelance / Estágio"
-						value="Disponível"
-						className="text-green-500"
-					/>
-					<TermValue
 						term="Celular"
 						value={
 							<Link target="_blank" href="tel:+5511964677083">

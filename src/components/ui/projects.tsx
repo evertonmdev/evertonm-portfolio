@@ -5,25 +5,26 @@ import { PinContainer } from "./3d-pin-card";
 
 const Projects: React.FunctionComponent = (props) => {
 	return (
-		<div className="md:hiddenscroll w-full h-fit py-10 flex justify-start items-start  overflow-x-auto">
+		<div className="md:hiddenscroll w-full h-fit py-10 flex justify-start items-start md:justify-center md:items-center  overflow-x-auto">
 			<ProjectContainer
 				title="Parttida"
 				href="https://parttida.vercel.app"
-				description="A web app for managing and tracking your personal finances."
+				description="Uma plataforma para conectar pessoas que amam esportes!."
 				image="/projetos/parttida.png"
 			/>
 			<ProjectContainer
 				title="Sound Type Lab"
 				href="https://sound-type-lab.vercel.app/"
-				description="A web app for managing and tracking your personal finances."
+				description="Uma plataforma para buscar letras de musicas e sincronizalas com a música."
 				image="/projetos/soundtypelab.png"
 			/>
 			<ProjectContainer
-				title="ToDo Tasks"
-				href="https://my-todo-list-ebon.vercel.app/"
-				description="A web app for managing and tracking your personal finances."
-				image="/projetos/mgtkTasks.png"
+				title="AWS SCHOOL"
+				href="https://awschool.megatok.site/"
+				description="Um projeto que fiz para ajudar os funcionarios da empresa tirar certificações da AWS."
+				image="/projetos/awsSchool.png"
 			/>
+
 		</div>
 	);
 };
