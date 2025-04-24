@@ -1,9 +1,8 @@
 import { CardHardSkill, ICardHardSkill } from "@/components/ui/card-hardskill";
 import * as React from "react";
 
-import Css3Logo from "@/assets/css3-logo";
+import AngularJSLogo from "@/assets/angularjs-logo";
 import FramerMotionLogo from "@/assets/framer-motion-logo";
-import Html5Logo from "@/assets/html5-logo";
 import NextJSLogo from "@/assets/nextjs-logo";
 import ReactJSLogo from "@/assets/reactjs-logo";
 import TailwindCssLogo from "@/assets/tailwindcss-logo";
@@ -24,18 +23,22 @@ const FrontEndSkills: React.FunctionComponent = () => {
 			children: <FramerMotionLogo className="fill-violet-800" />,
 		},
 		{
+			label: "Angular JS",
+			children: <AngularJSLogo key={"ok"} />
+		},
+		{
 			label: "Tailwind Css",
 			isStarred: true,
-			children: <TailwindCssLogo />,
+			children: <TailwindCssLogo className="w-full h-full" />,
 		},
-		{
-			label: "Html5",
-			children: <Html5Logo />,
-		},
-		{
-			label: "Css3",
-			children: <Css3Logo />,
-		},
+		// {
+		// 	label: "Html5",
+		// 	children: <Html5Logo />,
+		// },
+		// {
+		// 	label: "Css3",
+		// 	children: <Css3Logo />,
+		// },
 	];
 
 	return (

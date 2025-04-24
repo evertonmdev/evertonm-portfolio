@@ -15,7 +15,7 @@ const PersonalInformation: React.FC = () => {
 			<div className="flex gap-5 max-lg:flex-col">
 				<dl className="max-lg:w-full w-1/2 flex flex-col gap-2 overflow-hidden">
 					<TermValue term="Nome" value="Everton" />
-					<TermValue term="Idade" value="19" />
+					<TermValue term="Idade" value="20" />
 					<TermValue
 						term="Celular"
 						value={

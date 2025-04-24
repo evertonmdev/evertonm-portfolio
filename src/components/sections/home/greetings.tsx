@@ -48,7 +48,11 @@ const Greetings: React.FunctionComponent = () => {
 					}}
 					variants={MoveBottomToTop}
 				>
-					E aí! Chegou até aqui? Que bom! 😉 Prazer, sou desenvolvedor FullStack desde 2019 e tô sempre na correria pra aprender e criar coisas novas. Ultimamente, tenho me divertido bastante com AWS Serverless e AWS Bedrock, mas também manjo de React, Next.js, Node.js, Firebase... e por aí vai! Quer saber mais sobre mim e meus projetos? É só dar um scroll pra baixo! 👇
+					E aí, beleza? Que ótimo ver você por aqui! 😉
+
+					Sou desenvolvedor FullStack desde 2019, sempre buscando aprender e criar soluções que façam a diferença. Meu foco atual está em automações inteligentes e soluções especializadas com IA vertical, tornando processos mais ágeis e produtivos. Tenho duas certificações AWS, sendo uma delas a Developer Associate, além de experiência sólida em React, Next.js, Node.js e Firebase.
+
+					Quer conhecer mais sobre meus projetos ou trocar uma ideia sobre tecnologia e inovação? É só clicar aqui! 👇
 				</motion.p>
 			</article>
 			<motion.div
