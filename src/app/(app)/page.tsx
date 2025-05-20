@@ -1,5 +1,6 @@
 import AboutMe from "@/components/sections/AboutMe";
 import Home from "@/components/sections/Home";
+import MyCareer from "@/components/sections/MyCareer";
 import Contact from "@/components/sections/contact";
 import ProjectjsSession from "@/components/sections/projects/projects-session";
 import Divider from "@/components/ui/divider";
@@ -21,6 +22,8 @@ export default function App() {
 			<AboutMe />
 			<Divider />
 			<ProjectjsSession />
+			<Divider />
+			<MyCareer />
 			<Divider />
 			<Contact />
 		</main>
