@@ -9,7 +9,7 @@ const AboutMe: React.FunctionComponent = () => {
 	return (
 		<section
 			id="sobremim"
-			className="w-full max-lg:h-fit h-dvh flex flex-col gap-10 container relative py-10"
+			className="w-full h-fit flex flex-col gap-10 container relative py-10"
 		>
 			<TextShaded
 				backText={"Sobre mim"}
@@ -20,18 +20,22 @@ const AboutMe: React.FunctionComponent = () => {
 				}
 			/>
 
-			<div className="w-full h-full flex justify-between max-lg:flex-col max-lg:px-5 max-lg:gap-10">
-				<PersonalInformation />
-				<TabsContent
-					ArrayTabs={[
-						{ label: "HardSkills", isDefaultSelected: true },
-						{ label: "SoftSkills" },
-					]}
-					Contents={[
-						<HardSkills key={"HardSkills"} />,
-						<SoftSkills key={"SoftSkills"} />,
-					]}
-				/>
+			<div className="w-full h-full flex flex-col gap-10 max-lg:px-5">
+				<div className="col-span-3 row-span-3 w-full">
+					<PersonalInformation />
+				</div>
+				<div className="col-span-3 w-full">
+					<TabsContent
+						ArrayTabs={[
+							{ label: "HardSkills", isDefaultSelected: true },
+							{ label: "SoftSkills" },
+						]}
+						Contents={[
+							<HardSkills key={"HardSkills"} />,
+							<SoftSkills key={"SoftSkills"} />,
+						]}
+					/>
+				</div>
 			</div>
 		</section>
 	);

@@ -8,7 +8,7 @@ import TermValue from "./term-value";
 
 const PersonalInformation: React.FC = () => {
 	return (
-		<article className="max-lg:w-full w-1/2 h-fit text-zinc-200 z-20">
+		<article className="w-full h-fit text-zinc-200 z-20">
 			<h2 className="uppercase text-xl text-zinc-200 font-bold mb-5 pt-5">
 				Informações Pessoais
 			</h2>

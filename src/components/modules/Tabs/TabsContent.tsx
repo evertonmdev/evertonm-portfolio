@@ -30,7 +30,7 @@ const TabsContent: React.FunctionComponent<ITabsContentProps> = ({
 	const indexes = ArrayTabs.map((tab) => tab.label);
 
 	return (
-		<div className="hiddenscroll z-20 max-lg:w-full w-1/2 max-h-[80vh] h-full text-zinc-200 rounded-3xl pb-5 max-md:px-2 px-8 flex flex-col items-start justify-start overflow-y-auto">
+		<div className="hiddenscroll z-20 w-full  h-full text-zinc-200 rounded-3xl pb-5 max-md:px-2 px-8 flex flex-col items-start justify-start overflow-y-auto">
 			<Tabs states={states}>
 				{ArrayTabs.map((tab) => (
 					<Tab

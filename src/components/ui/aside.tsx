@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils/cn";
 import { useGlobalStates } from "@/lib/utils/useGlobalStates";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import * as React from "react";
-import { FaHome, FaTerminal, FaUser } from "react-icons/fa";
+import { FaBuilding, FaHome, FaTerminal, FaUser } from "react-icons/fa";
 import { IconType } from "react-icons/lib";
 import { MdEmail } from "react-icons/md";
 
@@ -57,7 +57,8 @@ const Aside: React.FunctionComponent = (props) => {
 				<LiComponent scope={[0, 1]} href="#home" Icon={FaHome} />
 				<LiComponent scope={[1, 2]} href="#sobremim" Icon={FaUser} />
 				<LiComponent scope={[2, 3]} href="#projetos" Icon={FaTerminal} />
-				<LiComponent scope={[3, 5]} href="#contato" Icon={MdEmail} />
+				<LiComponent scope={[3, 7]} href="#mycareer" Icon={FaBuilding} />
+				<LiComponent scope={[7, 9]} href="#contato" Icon={MdEmail} />
 			</ul>
 		</aside>
 	);
