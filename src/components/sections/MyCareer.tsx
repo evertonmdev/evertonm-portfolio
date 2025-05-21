@@ -23,8 +23,6 @@ const MyCareer: React.FunctionComponent = () => {
 		</motion.div>
 	);
 
-
-
 	const timelineData = [
 		{
 			title: "Conclusão do Ensino Médio",
@@ -119,6 +117,7 @@ const MyCareer: React.FunctionComponent = () => {
 			)
 		}
 	];
+
 	return (
 		<section
 			id="mycareer"

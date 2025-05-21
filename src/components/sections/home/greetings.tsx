@@ -50,7 +50,7 @@ const Greetings: React.FunctionComponent = () => {
 				>
 					E aí, beleza? Que ótimo ver você por aqui! 😉
 
-					Sou desenvolvedor FullStack desde 2019, sempre buscando aprender e criar soluções que façam a diferença. Meu foco atual está em automações inteligentes e soluções especializadas com IA vertical, tornando processos mais ágeis e produtivos. Tenho duas certificações AWS, sendo uma delas a Developer Associate, além de experiência sólida em React, Next.js, Node.js e Firebase.
+					Sou desenvolvedor FullStack desde 2022, sempre buscando aprender e criar soluções que façam a diferença. Meu foco atual está em automações inteligentes e soluções especializadas com IA vertical, tornando processos mais ágeis e produtivos. Tenho duas certificações AWS, sendo uma delas a Developer Associate, além de experiência sólida em React, Next.js, Node.js e Firebase.
 
 					Quer conhecer mais sobre meus projetos ou trocar uma ideia sobre tecnologia e inovação? É só clicar aqui! 👇
 				</motion.p>

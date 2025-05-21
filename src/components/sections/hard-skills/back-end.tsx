@@ -3,16 +3,20 @@ import FirebaseLogo from "@/assets/firebase-logo";
 import MySqlLogo from "@/assets/mysql-logo";
 import NodeJSLogo from "@/assets/nodejs-logo";
 import PrismaLogo from "@/assets/prisma-logo";
-import PythonLogo from "@/assets/python-logo";
-import RustLogo from "@/assets/rust-logo";
+// import PythonLogo from "@/assets/python-logo";
 import TypeScriptLogo from "@/assets/typescript-logo";
 import { CardHardSkill, ICardHardSkill } from "@/components/ui/card-hardskill";
 import * as React from "react";
+import { FaJava, FaPython } from "react-icons/fa6";
 
 const BackEndSkills: React.FunctionComponent = () => {
 	const backend_skills: ICardHardSkill[] = [
 		{ label: "Bun", children: <BunLogo />, isStarred: true },
-		{ label: "Python", children: <PythonLogo /> },
+		{
+			label: "Java",
+			children: <FaJava size={55} />,
+		},
+		{ label: "Python", children: <FaPython size={55} /> },
 		{ label: "NodeJS", children: <NodeJSLogo /> },
 		{ label: "TypeScript", children: <TypeScriptLogo />, isStarred: true },
 		{
@@ -22,7 +26,6 @@ const BackEndSkills: React.FunctionComponent = () => {
 		},
 		{ label: "MySql", children: <MySqlLogo className="invert" /> },
 		{ label: "firebase", children: <FirebaseLogo /> },
-		{ label: "Rust", children: <RustLogo className="invert" /> },
 	];
 
 	return (

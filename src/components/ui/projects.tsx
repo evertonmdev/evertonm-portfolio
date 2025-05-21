@@ -5,7 +5,7 @@ import { PinContainer } from "./3d-pin-card";
 
 const Projects: React.FunctionComponent = (props) => {
 	return (
-		<div className="md:hiddenscroll w-full h-fit py-10 flex justify-start items-start md:justify-center md:items-center  overflow-x-auto">
+		<div className="md:hiddenscroll pl-[10%] w-full h-fit py-10 flex justify-start items-start md:justify-center md:items-center  overflow-x-auto">
 			<ProjectContainer
 				title="Parttida"
 				href="https://parttida.vercel.app"

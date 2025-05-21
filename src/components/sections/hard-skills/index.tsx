@@ -6,7 +6,7 @@ import ToolsSkills from "./tools";
 
 const HardSkills: React.FunctionComponent = () => {
 	return (
-		<div className="space-y-4">
+		<div className="space-y-4 w-full">
 			<FrontEndSkills />
 			<BackEndSkills />
 			<CloudSkills />

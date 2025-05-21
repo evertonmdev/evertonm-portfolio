@@ -21,21 +21,17 @@ const AboutMe: React.FunctionComponent = () => {
 			/>
 
 			<div className="w-full h-full flex flex-col gap-10 max-lg:px-5">
-				<div className="col-span-3 row-span-3 w-full">
-					<PersonalInformation />
-				</div>
-				<div className="col-span-3 w-full">
-					<TabsContent
-						ArrayTabs={[
-							{ label: "HardSkills", isDefaultSelected: true },
-							{ label: "SoftSkills" },
-						]}
-						Contents={[
-							<HardSkills key={"HardSkills"} />,
-							<SoftSkills key={"SoftSkills"} />,
-						]}
-					/>
-				</div>
+				<PersonalInformation />
+				<TabsContent
+					ArrayTabs={[
+						{ label: "HardSkills", isDefaultSelected: true },
+						{ label: "SoftSkills" },
+					]}
+					Contents={[
+						<HardSkills key={"HardSkills"} />,
+						<SoftSkills key={"SoftSkills"} />,
+					]}
+				/>
 			</div>
 		</section>
 	);
